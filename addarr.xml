@@ -1,1 +1,46 @@
-init
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <TemplateURL>https://raw.githubusercontent.com/bytestorm/unraid/master/addarr.xml</TemplateURL>
+  <Beta>False</Beta>
+  <Category>MediaServer:Other</Category>
+  <Name>addarr</Name>
+  <Description>
+    addarr bot docker
+  </Description>
+  <Overview>
+    addarr bot docker
+  </Overview>
+  <Registry>https://hub.docker.com/r/waterboy1602/addarr</Registry>
+  <GitHub>https://github.com/bytestorm/unraid</GitHub>
+  <Repository>waterboy1602/addarr:latest</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/addarr/config.yaml</HostDir>
+      <ContainerDir>/app/config.yaml</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/addarr/chatid.txt</HostDir>
+      <ContainerDir>/app/chatid.txt</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/addarr/admin.txt</HostDir>
+      <ContainerDir>/app/admin.txt</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/addarr/logs</HostDir>
+      <ContainerDir>/app/logs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Shell>bash</Shell>
+  <Icon>https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/telegram/telegram.png</Icon>
+  <ExtraParams></ExtraParams>
+</Containers>
